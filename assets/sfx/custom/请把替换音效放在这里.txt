@@ -1,0 +1,14 @@
+LIFE JOURNEY 音效替换说明
+
+支持 MP3 或 WAV。可替换文件名：
+
+lamp-on              灯亮
+album-approach       相册靠近
+album-open           打开相册
+button-soft          柔和按键
+page-soft            普通翻页
+chapter-page         章节翻页
+album-close          相册合上
+
+人物专属音效也可以放进：
+D:\LIFE_ARCHIVE\LIFE-00001\sfx

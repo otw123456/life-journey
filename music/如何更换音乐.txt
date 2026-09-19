@@ -1,0 +1,11 @@
+当前默认音乐是 background.mp3。
+
+以后要换成你自己的音乐，请复制到这个文件夹，并改成下面任意一个名字：
+
+custom.mp3
+custom.m4a
+custom.wav
+
+系统会优先播放 custom 文件；没有时才播放默认 background 音乐。
+放好后关闭 LIFE JOURNEY，再重新打开。
+音乐会自动循环播放。

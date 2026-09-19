@@ -1,0 +1,23 @@
+LIFE JOURNEY 音乐替换说明
+
+优先推荐：把人物专属音乐放进：
+D:\LIFE_ARCHIVE\LIFE-00001\music
+
+也可以把通用替换音乐放在当前 custom 文件夹。
+
+支持 MP3 或 WAV。文件名必须使用下面这些名字：
+
+00-opening.mp3       灯亮与开场
+01-prologue.mp3      序章
+02-chapter-01.mp3    第一章 · TA是谁
+03-chapter-02.mp3    第二章 · 从哪里来
+04-chapter-03.mp3    第三章 · 年少时光
+05-chapter-04.mp3    第四章 · 爱与成家
+06-chapter-05.mp3    第五章 · 工作与担当
+07-chapter-06.mp3    第六章 · 命运的转弯
+08-chapter-07.mp3    第七章 · 日子里的TA
+09-chapter-08.mp3    第八章 · 留给后来的人
+10-ending.mp3        相册合上与结尾
+
+放好以后，关闭 LIFE JOURNEY，再重新打开即可。
+没有替换的部分会继续播放系统自带音乐。

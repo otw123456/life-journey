@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#15251f" />
+  <meta name="description" content="LIFE JOURNEY · 把一个人的故事，好好留下来。" />
+  <title>LIFE JOURNEY · LIFE-00001</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315251f'/%3E%3Cpath d='M18 17h21a8 8 0 0 1 8 8v22H26a8 8 0 0 1-8-8V17Z' fill='%23f5ead4'/%3E%3Cpath d='M26 17v30' stroke='%23c29054' stroke-width='3'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell" id="app">
+    <header class="topbar">
+      <button class="brand" id="homeBtn" aria-label="回到旅程开头">
+        <span class="brand-mark" aria-hidden="true">LJ</span>
+        <span><strong>LIFE JOURNEY</strong><small>人生故事采集计划</small></span>
+      </button>
+      <div class="project-chip"><span></span>LIFE-00001</div>
+      <div class="header-actions">
+        <button class="sound-toggle" id="soundBtn" aria-pressed="false">♫ 开启声音</button>
+        <button class="sound-toggle" id="soundSettingsBtn">调声音</button>
+        <button class="quiet-link" id="osBtn">LIFE OS</button>
+      </div>
+    </header>
+
+    <main id="stage" class="stage" aria-live="polite"></main>
+
+    <footer class="footer">
+      <span id="saveState">内容保存在当前浏览器</span>
+      <span>每一次回答，都会自动保存</span>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="storageModal" role="dialog" aria-modal="true" aria-labelledby="storageTitle">
+    <section class="modal-card">
+      <button class="modal-close" id="storageClose" aria-label="关闭">×</button>
+      <div class="seal" aria-hidden="true">存</div>
+      <p class="eyebrow">第一次使用</p>
+      <h2 id="storageTitle">先为故事选一个家</h2>
+      <p class="modal-copy">在线版会自动保存在当前浏览器中。若想把故事同时留在电脑里，也可以选择一个 <strong>LIFE_ARCHIVE</strong> 文件夹。</p>
+      <button class="primary wide" id="chooseFolderBtn">选择本地 LIFE_ARCHIVE 文件夹</button>
+      <button class="text-button" id="useFallbackBtn">使用浏览器保存</button>
+      <div class="support-note" id="storageSupport"></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop hidden" id="soundModal" role="dialog" aria-modal="true" aria-labelledby="soundTitle">
+    <section class="modal-card sound-card">
+      <button class="modal-close" id="soundClose" aria-label="关闭">×</button>
+      <div class="seal" aria-hidden="true">声</div>
+      <p class="eyebrow">声音设置</p>
+      <h2 id="soundTitle">调到听着舒服</h2>
+      <p class="modal-copy">背景音乐和翻页、按键音效可以分开调节。</p>
+      <div class="sound-controls">
+        <label>
+          <span><strong>背景音乐</strong><output id="musicVolumeValue">16%</output></span>
+          <input id="musicVolumeControl" type="range" min="0" max="60" step="1" value="16" />
+        </label>
+        <label>
+          <span><strong>按键和翻页音效</strong><output id="sfxVolumeValue">20%</output></span>
+          <input id="sfxVolumeControl" type="range" min="0" max="60" step="1" value="20" />
+        </label>
+      </div>
+      <button class="primary wide" id="soundDone">调好了</button>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <input id="photoInput" type="file" accept="image/*" hidden />
+  <audio id="bgmA" preload="auto" loop></audio>
+  <audio id="bgmB" preload="auto" loop></audio>
+  <audio id="sfxPlayer" preload="auto"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
